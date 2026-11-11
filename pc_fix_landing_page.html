@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC FIX - Reparación y Soporte Técnico de Computadoras</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans bg-white text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-800 to-brand-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+                        <i class="fa-solid fa-wrench text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-extrabold tracking-tight text-slate-900">PC <span class="text-brand-600">FIX</span></span>
+                        <span class="block text-[10px] font-semibold text-slate-400 tracking-wider uppercase -mt-1">Reparación Profesional</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                    <a href="#inicio" class="hover:text-brand-600 transition-colors">Inicio</a>
+                    <a href="#servicios" class="hover:text-brand-600 transition-colors">Servicios</a>
+                    <a href="#nosotros" class="hover:text-brand-600 transition-colors">¿Por qué nosotros?</a>
+                    <a href="#cotizador" class="hover:text-brand-600 transition-colors">Cotizar</a>
+                    <a href="#contacto" class="hover:text-brand-600 transition-colors">Contacto</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="#contacto" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm transition-all shadow-md shadow-brand-500/20 hover:shadow-lg hover:shadow-brand-500/30 active:scale-95">
+                        Solicitar Diagnóstico
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-brand-600 hover:bg-slate-50 focus:outline-none" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-100 bg-white px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Inicio</a>
+            <a href="#servicios" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Servicios</a>
+            <a href="#nosotros" class="block py-2 text-slate-700 font-medium hover:text-brand-600">¿Por qué nosotros?</a>
+            <a href="#cotizador" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Cotizar</a>
+            <a href="#contacto" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Contacto</a>
+            <a href="#contacto" class="block w-full text-center mt-2 px-5 py-3 rounded-xl bg-brand-600 text-white font-semibold text-sm">
+                Solicitar Diagnóstico
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-slate-50/80 via-white to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-semibold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+                        Servicio Técnico Especializado
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Soluciones rápidas para tu <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-brand-800">Computadora o Laptop</span>
+                    </h1>
+                    
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Reparación de hardware, optimización de sistema, eliminación de virus y mantenimiento preventivo. Diagnóstico preciso en menos de 24 horas.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#contacto" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-center shadow-lg shadow-brand-500/25 transition-all hover:-translate-y-0.5">
+                            Solicitar Diagnóstico Gratis
+                        </a>
+                        <a href="#servicios" class="w-full sm:w-auto px-8 py-4 rounded-xl border border-slate-200 hover:border-slate-300 bg-white text-slate-700 font-semibold text-center transition-all hover:bg-slate-50">
+                            Explorar Servicios
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats -->
+                    <div class="pt-8 border-t border-slate-100 grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">+1,500</p>
+                            <p class="text-xs text-slate-500">Equipos Reparados</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">99.8%</p>
+                            <p class="text-xs text-slate-500">Clientes Satisfechos</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">6 Meses</p>
+                            <p class="text-xs text-slate-500">Garantía Escrita</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Illustration Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-500 to-cyan-500 opacity-20 blur-xl"></div>
+                        <div class="relative bg-white border border-slate-100 rounded-3xl p-6 sm:p-8 shadow-2xl">
+                            <!-- SVG Graphic Representation of Logo Concept -->
+                            <div class="aspect-square w-full bg-slate-50 rounded-2xl flex flex-col items-center justify-center p-6 border border-slate-100 relative overflow-hidden group">
+                                <div class="absolute inset-0 bg-gradient-to-br from-brand-50 to-transparent opacity-60"></div>
+                                
+                                <!-- Decorative Circuits -->
+                                <svg class="absolute w-full h-full text-slate-200 inset-0" fill="none" stroke="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <path d="M10 20 H40 V50 H90" stroke-width="0.5" stroke-dasharray="2 2" />
+                                    <path d="M80 10 V40 H50 V90" stroke-width="0.5" stroke-dasharray="2 2" />
+                                    <circle cx="40" cy="50" r="2" class="fill-brand-400" />
+                                    <circle cx="50" cy="40" r="2" class="fill-brand-600" />
+                                </svg>
+
+                                <div class="relative z-10 text-center space-y-4">
+                                    <div class="w-24 h-24 mx-auto bg-gradient-to-tr from-brand-700 to-brand-500 rounded-2xl flex items-center justify-center shadow-xl shadow-brand-500/30 group-hover:scale-105 transition-transform">
+                                        <i class="fa-solid fa-microchip text-5xl text-white"></i>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <h3 class="font-bold text-slate-900 text-lg">PC FIX Service</h3>
+                                        <p class="text-xs text-brand-600 font-medium">Soporte Técnico de Alto Nivel</p>
+                                    </div>
+                                </div>
+
+                                <!-- Floating Status Badges -->
+                                <div class="absolute top-4 right-4 bg-white px-3 py-1.5 rounded-lg shadow-sm border border-slate-100 text-xs font-semibold text-emerald-600 flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Reparación Exprés
+                                </div>
+                                <div class="absolute bottom-4 left-4 bg-white px-3 py-1.5 rounded-lg shadow-sm border border-slate-100 text-xs font-semibold text-brand-600 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-shield-halved"></i> 100% Seguro
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-2">Nuestros Servicios</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Soluciones Integrales para tu PC</p>
+                <p class="text-slate-600 mt-4">Atendemos tanto a particulares como a empresas con los estándares más altos de calidad.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-slate-50/70 hover:bg-white p-8 rounded-2xl border border-slate-100 hover:border-brand-200 transition-all hover:shadow-xl hover:shadow-slate-100 group">
+                    <div class="w-14 h-14 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Reparación de Hardware</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Cambio de pantallas, reparación de placas madre, fuentes de poder, puertos de carga y teclados.
+                    </p>
+                    <a href="#contacto" class="text-brand-600 font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                        Saber más <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-slate-50/70 hover:bg-white p-8 rounded-2xl border border-slate-100 hover:border-brand-200 transition-all hover:shadow-xl hover:shadow-slate-100 group">
+                    <div class="w-14 h-14 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Optimización y Software</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Formateo, instalación de Windows/Mac, instalación de SSD para multiplicar la velocidad de tu equipo.
+                    </p>
+                    <a href="#contacto" class="text-brand-600 font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                        Saber más <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-slate-50/70 hover:bg-white p-8 rounded-2xl border border-slate-100 hover:border-brand-200 transition-all hover:shadow-xl hover:shadow-slate-100 group">
+                    <div class="w-14 h-14 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-shield-virus"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Limpieza de Virus</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Eliminación de malware, spyware, ransomware y protección antivirus avanzada sin perder tus archivos.
+                    </p>
+                    <a href="#contacto" class="text-brand-600 font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                        Saber más <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-slate-50/70 hover:bg-white p-8 rounded-2xl border border-slate-100 hover:border-brand-200 transition-all hover:shadow-xl hover:shadow-slate-100 group">
+                    <div class="w-14 h-14 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Armado de PC Gamer</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Asesoría técnica y ensamblaje de computadoras personalizadas para Gaming, Edición o Trabajo Pesado.
+                    </p>
+                    <a href="#contacto" class="text-brand-600 font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                        Saber más <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="nosotros" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-2">¿Por qué elegirnos?</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-6">Transparencia y Calidad Garantizada</p>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        Sabemos lo importante que es tu computadora para tu trabajo o estudio. Por eso trabajamos con repuestos 100% originales y te mantenemos informado durante todo el proceso de reparación.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-bolt text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Diagnóstico Rápido</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">Revisión técnica inicial en un máximo de 24 horas.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
+                            <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-award text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Garantía por Escrito</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">Todas nuestras reparaciones cuentan con garantía directa.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
+                            <div class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-user-shield text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Privacidad de Datos</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">Protegemos tu información personal durante toda la reparación.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-900">Opiniones de Nuestros Clientes</h3>
+                    
+                    <!-- Review 1 -->
+                    <div class="border-b border-slate-100 pb-4">
+                        <div class="flex items-center gap-1 text-amber-400 text-xs mb-2">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic">"Mi laptop no encendía y pensaba que la había perdido. En PC FIX detectaron el fallo en la fuente en 1 día. Excelente atención."</p>
+                        <p class="text-xs font-bold text-slate-900 mt-2">— Carlos Mendoza</p>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="border-b border-slate-100 pb-4">
+                        <div class="flex items-center gap-1 text-amber-400 text-xs mb-2">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic">"Instalaron un disco SSD en mi PC de escritorio y quedó volando. Quedé súper satisfecha con el servicio."</p>
+                        <p class="text-xs font-bold text-slate-900 mt-2">— Andrea Gómez</p>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 text-xs mb-2">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic">"Armaron mi PC gamer desde cero con las piezas que compré. Muy profesionales con la gestión del cableado."</p>
+                        <p class="text-xs font-bold text-slate-900 mt-2">— Felipe Restrepo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Cost Estimator -->
+    <section id="cotizador" class="py-20 bg-white border-t border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-2">Calculadora Estimada</h2>
+                <p class="text-3xl font-extrabold text-slate-900">Estima el Costo de tu Servicio</p>
+                <p class="text-slate-600 text-sm mt-2">Selecciona los servicios requeridos para una estimación previa sin compromiso.</p>
+            </div>
+
+            <div class="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200">
+                <div class="grid sm:grid-cols-2 gap-4" id="services-checklist">
+                    <label class="flex items-center p-4 bg-white rounded-xl border border-slate-200 cursor-pointer hover:border-brand-500 transition-all">
+                        <input type="checkbox" data-price="25" class="w-5 h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 service-calc">
+                        <div class="ml-3">
+                            <span class="block text-sm font-semibold text-slate-800">Diagnóstico Preventivo</span>
+                            <span class="text-xs text-slate-500">$25 USD</span>
+                        </div>
+                    </label>
+
+                    <label class="flex items-center p-4 bg-white rounded-xl border border-slate-200 cursor-pointer hover:border-brand-500 transition-all">
+                        <input type="checkbox" data-price="35" class="w-5 h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 service-calc">
+                        <div class="ml-3">
+                            <span class="block text-sm font-semibold text-slate-800">Mantenimiento y Limpieza Física</span>
+                            <span class="text-xs text-slate-500">$35 USD</span>
+                        </div>
+                    </label>
+
+                    <label class="flex items-center p-4 bg-white rounded-xl border border-slate-200 cursor-pointer hover:border-brand-500 transition-all">
+                        <input type="checkbox" data-price="40" class="w-5 h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 service-calc">
+                        <div class="ml-3">
+                            <span class="block text-sm font-semibold text-slate-800">Formateo e Instalación de Sistema</span>
+                            <span class="text-xs text-slate-500">$40 USD</span>
+                        </div>
+                    </label>
+
+                    <label class="flex items-center p-4 bg-white rounded-xl border border-slate-200 cursor-pointer hover:border-brand-500 transition-all">
+                        <input type="checkbox" data-price="30" class="w-5 h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 service-calc">
+                        <div class="ml-3">
+                            <span class="block text-sm font-semibold text-slate-800">Eliminación de Virus y Optimización</span>
+                            <span class="text-xs text-slate-500">$30 USD</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block">Estimado Aproximado</span>
+                        <span class="text-3xl font-extrabold text-brand-600" id="total-price">$0 USD</span>
+                    </div>
+                    <a href="#contacto" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-brand-600 text-white font-bold text-center hover:bg-brand-700 transition-colors">
+                        Solicitar este Servicio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-2">Contacto Directo</h2>
+                        <p class="text-3xl font-extrabold text-slate-900">¿Tienes dudas o necesitas ayuda?</p>
+                        <p class="text-slate-600 mt-3 text-sm">Contáctanos directamente o envíanos un mensaje para agendar la revisión de tu equipo.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-slate-400 font-semibold uppercase">Ubicación</h4>
+                                <p class="text-sm font-bold text-slate-800">Av. Principal #123, Centro Técnico</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-slate-400 font-semibold uppercase">Teléfono</h4>
+                                <p class="text-sm font-bold text-slate-800">+57 300 123 4567</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-slate-400 font-semibold uppercase">Horario de Atención</h4>
+                                <p class="text-sm font-bold text-slate-800">Lun - Sáb: 8:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick WhatsApp CTA -->
+                    <div class="p-6 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-emerald-900 text-sm">¿Prefieres WhatsApp?</h4>
+                            <p class="text-xs text-emerald-700">Respuesta inmediata por chat</p>
+                        </div>
+                        <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Chatear
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200">
+                        <form id="contact-form" class="space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre Completo</label>
+                                    <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Teléfono</label>
+                                    <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Tipo de Equipo</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white text-sm text-slate-700">
+                                    <option>Laptop / Notebook</option>
+                                    <option>PC de Escritorio</option>
+                                    <option>PC Gamer</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Descripción del Problema</label>
+                                <textarea rows="4" required placeholder="Describe brevemente la falla de tu equipo..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm transition-all shadow-md shadow-brand-500/20">
+                                Enviar Solicitud de Diagnóstico
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 hidden z-50 bg-slate-900 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-xl"></i>
+        <div>
+            <p class="font-bold text-sm">¡Mensaje Enviado!</p>
+            <p class="text-xs text-slate-400">Nos pondremos en contacto contigo pronto.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 border-b border-slate-800 pb-8">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white">
+                        <i class="fa-solid fa-wrench text-sm"></i>
+                    </div>
+                    <span class="text-xl font-bold text-white">PC <span class="text-brand-500">FIX</span></span>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="#inicio" class="hover:text-white transition-colors">Inicio</a>
+                    <a href="#servicios" class="hover:text-white transition-colors">Servicios</a>
+                    <a href="#nosotros" class="hover:text-white transition-colors">Nosotros</a>
+                    <a href="#contacto" class="hover:text-white transition-colors">Contacto</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-xs text-slate-500">
+                © <span id="year"></span> PC FIX - Reparaciones de PC. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        // Set dynamic year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Interactive Price Calculator
+        const checkboxes = document.querySelectorAll('.service-calc');
+        const totalPriceEl = document.getElementById('total-price');
+
+        function calculateTotal() {
+            let total = 0;
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    total += parseInt(cb.getAttribute('data-price'));
+                }
+            });
+            totalPriceEl.textContent = `$${total} USD`;
+        }
+
+        checkboxes.forEach(cb => cb.addEventListener('change', calculateTotal));
+
+        // Form submission toast replacement for alerts
+        const contactForm = document.getElementById('contact-form');
+        const toast = document.getElementById('toast');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            toast.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
